@@ -1,0 +1,4 @@
+pandas==2.3.3
+pywinauto==0.6.9
+pywin32==311
+comtypes==1.4.13
