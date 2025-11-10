@@ -1,0 +1,510 @@
+depth,control_type,name,automation_id,class_name,framework_id,handle,left,top,right,bottom
+0,Window,Orpheus - <Abbey A-02 (local)>     ,frmOrpheus,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,68118,4056,147,4816,873
+1,Window,  Fluids Distribution,frmFluids,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,2035502,4064,215,4808,804
+2,Window,Select a Fluid,frmSelectTreeDialog,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,2821616,4036,217,4836,802
+3,List,,lstVersion,WindowsForms10.LISTBOX.app.0.141b42a_r7_ad1,WinForm,987078,4053,754,4065,768
+3,Button,Cancel,btnCancel,WindowsForms10.BUTTON.app.0.141b42a_r7_ad1,WinForm,1577044,4723,731,4811,754
+3,Text,*,lblSearchAll,WindowsForms10.STATIC.app.0.141b42a_r7_ad1,WinForm,1184238,4790,280,4815,304
+3,Text,Column to Search,lblSearchColumns,WindowsForms10.STATIC.app.0.141b42a_r7_ad1,WinForm,594392,4539,257,4648,273
+3,ComboBox,,cbMRU,WindowsForms10.COMBOBOX.app.0.141b42a_r7_ad1,WinForm,528912,4172,260,4362,282
+4,Text,,,,,,3,3,170,19
+4,Button,Open,,,,,4346,261,4361,281
+3,Edit,,txtSearch,WindowsForms10.EDIT.app.0.141b42a_r7_ad1,WinForm,987650,4654,282,4786,302
+3,Pane,Save Criteria,pnlSelectDiagram,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,2560002,4632,638,4815,660
+3,ComboBox,Select a Fluid,cbSearchColumns,WindowsForms10.COMBOBOX.app.0.141b42a_r7_ad1,WinForm,2494944,4654,256,4804,278
+4,Text,Select a Fluid,,,,,3,3,130,19
+4,Button,Open,,,,,4788,257,4803,277
+3,Text,Brine (local),lblSelection,WindowsForms10.STATIC.app.0.141b42a_r7_ad1,WinForm,6033722,4123,642,4623,662
+3,Text,Recent Selections,lblMRU,WindowsForms10.STATIC.app.0.141b42a_r7_ad1,WinForm,987586,4059,263,4162,277
+3,Pane,,pnlMain,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,1774016,4061,312,4811,632
+4,Pane,,spTreeView,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,1905098,4061,312,4811,632
+5,Pane,,1577204,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,1577204,4061,312,4338,632
+6,Tree,,tvLeftSide,WindowsForms10.SysTreeView32.app.0.141b42a_r7_ad1,WinForm,921078,4062,313,4337,631
+7,TreeItem,Fluids,,,WinForm,,4104,314,4142,330
+8,TreeItem,Bingham Plastic,,,WinForm,,4123,330,4214,346
+8,TreeItem,Empirical Model Fluids,,,WinForm,,4123,346,4253,362
+8,TreeItem,Foam,,,WinForm,,4123,362,4157,378
+8,TreeItem,Gas,,,WinForm,,4123,378,4148,394
+8,TreeItem,Herschel Bulkley,,,WinForm,,4123,394,4218,410
+8,TreeItem,Multiphase,,,WinForm,,4123,410,4190,426
+8,TreeItem,Newtonian,,,WinForm,,4123,426,4187,442
+8,TreeItem,Power Law,,,WinForm,,4123,442,4184,458
+5,Pane,,593522,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,593522,4344,312,4811,632
+6,Pane,,spListView,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,659868,4344,312,4811,632
+7,Pane,,1118264,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,1118264,4344,312,4806,632
+8,List,,lvRightSide,WindowsForms10.SysListView32.app.0.141b42a_r7_ad1,WinForm,5770916,4345,313,4805,631
+9,Header,Header Control,Header,SysHeader32,Win32,2363918,4346,314,4789,338
+10,HeaderItem,Newtonian (24),HeaderItem 0,,,,4346,314,4486,338
+10,HeaderItem,Checked Out By,HeaderItem 1,,,,4486,314,4556,338
+10,HeaderItem,Fluid,HeaderItem 2,,,,4556,314,4696,338
+10,HeaderItem,Model/Type,HeaderItem 3,,,,4696,314,4836,338
+10,HeaderItem,Date Modified,HeaderItem 4,,,,0,0,0,0
+10,HeaderItem,Modified By,HeaderItem 5,,,,0,0,0,0
+10,HeaderItem,Folder,HeaderItem 6,,,,0,0,0,0
+9,ScrollBar,Vertical,NonClientVerticalScrollBar,,,,4787,314,4804,613
+10,Button,Line up,UpButton,,,,4787,314,4804,331
+10,Thumb,Position,ScrollbarThumb,,,,4787,331,4804,497
+10,Button,Page down,DownPageButton,,,,4787,497,4804,596
+10,Button,Line down,DownButton,,,,4787,596,4804,613
+9,ScrollBar,Horizontal,NonClientHorizontalScrollBar,,,,4346,613,4787,630
+10,Button,Column left,UpButton,,,,4346,613,4363,630
+10,Thumb,Position,ScrollbarThumb,,,,4363,613,4642,630
+10,Button,Page right,DownPageButton,,,,4642,613,4770,630
+10,Button,Column right,DownButton,,,,4770,613,4787,630
+9,Thumb,,,,,,4787,613,4804,630
+9,ListItem,B22 Brine (local),,,WinForm,,4346,338,4787,356
+10,Text,B22 Brine (local),,,WinForm,,4346,338,4787,356
+10,Text,,,,WinForm,,4486,338,4556,356
+10,Text,Liquid,,,WinForm,,4556,338,4696,356
+10,Text,Newtonian,,,WinForm,,4696,338,4787,356
+10,Text,10/17/2024 10:45:47 AM,,,WinForm,,0,0,0,0
+10,Text,bsmith,,,WinForm,,0,0,0,0
+10,Text,Newtonian,,,WinForm,,0,0,0,0
+9,ListItem,Brine (1.68 SG) (local),,,WinForm,,4346,356,4787,374
+10,Text,Brine (1.68 SG) (local),,,WinForm,,4346,356,4787,374
+10,Text,,,,WinForm,,4486,356,4556,374
+10,Text,Liquid,,,WinForm,,4556,356,4696,374
+10,Text,Newtonian,,,WinForm,,4696,356,4787,374
+10,Text,8/29/2024 9:35:43 AM,,,WinForm,,0,0,0,0
+10,Text,bsmith,,,WinForm,,0,0,0,0
+10,Text,Newtonian,,,WinForm,,0,0,0,0
+9,ListItem,Brine (10.8ppg) (local),,,WinForm,,4346,374,4787,392
+10,Text,Brine (10.8ppg) (local),,,WinForm,,4346,374,4787,392
+10,Text,,,,WinForm,,4486,374,4556,392
+10,Text,Liquid,,,WinForm,,4556,374,4696,392
+10,Text,Newtonian,,,WinForm,,4696,374,4787,392
+10,Text,7/17/2024 12:36:54 PM,,,WinForm,,0,0,0,0
+10,Text,bsmith,,,WinForm,,0,0,0,0
+10,Text,Newtonian,,,WinForm,,0,0,0,0
+9,ListItem,Brine (local),,,WinForm,,4346,392,4787,410
+10,Text,Brine (local),,,WinForm,,4346,392,4787,410
+10,Text,,,,WinForm,,4486,392,4556,410
+10,Text,Liquid,,,WinForm,,4556,392,4696,410
+10,Text,Newtonian,,,WinForm,,4696,392,4787,410
+10,Text,5/30/2024 4:18:42 PM,,,WinForm,,0,0,0,0
+10,Text,bsmith,,,WinForm,,0,0,0,0
+10,Text,Newtonian,,,WinForm,,0,0,0,0
+9,ListItem,Brine Abby (local),,,WinForm,,4346,410,4787,428
+10,Text,Brine Abby (local),,,WinForm,,4346,410,4787,428
+10,Text,,,,WinForm,,4486,410,4556,428
+10,Text,Liquid,,,WinForm,,4556,410,4696,428
+10,Text,Newtonian,,,WinForm,,4696,410,4787,428
+10,Text,2/4/2025 12:27:20 PM,,,WinForm,,0,0,0,0
+10,Text,bsmith,,,WinForm,,0,0,0,0
+10,Text,Newtonian,,,WinForm,,0,0,0,0
+9,ListItem,CaCl 2%,,,WinForm,,4346,428,4787,446
+10,Text,CaCl 2%,,,WinForm,,4346,428,4787,446
+10,Text,CTES Read-Only,,,WinForm,,4486,428,4556,446
+10,Text,Liquid,,,WinForm,,4556,428,4696,446
+10,Text,Newtonian,,,WinForm,,4696,428,4787,446
+10,Text,7/30/2018 8:47:52 AM,,,WinForm,,0,0,0,0
+10,Text,CTES,,,WinForm,,0,0,0,0
+10,Text,Newtonian,,,WinForm,,0,0,0,0
+9,ListItem,Completion Fluid (local),,,WinForm,,4346,446,4787,464
+10,Text,Completion Fluid (local),,,WinForm,,4346,446,4787,464
+10,Text,,,,WinForm,,4486,446,4556,464
+10,Text,Liquid,,,WinForm,,4556,446,4696,464
+10,Text,Newtonian,,,WinForm,,4696,446,4787,464
+10,Text,9/12/2024 3:34:20 PM,,,WinForm,,0,0,0,0
+10,Text,bsmith,,,WinForm,,0,0,0,0
+10,Text,Newtonian,,,WinForm,,0,0,0,0
+9,ListItem,Diesel,,,WinForm,,4346,464,4787,482
+10,Text,Diesel,,,WinForm,,4346,464,4787,482
+10,Text,CTES Read-Only,,,WinForm,,4486,464,4556,482
+10,Text,Liquid,,,WinForm,,4556,464,4696,482
+10,Text,Newtonian,,,WinForm,,4696,464,4787,482
+10,Text,7/30/2018 8:47:52 AM,,,WinForm,,0,0,0,0
+10,Text,CTES,,,WinForm,,0,0,0,0
+10,Text,Newtonian,,,WinForm,,0,0,0,0
+9,ListItem,Equinor O-3 (13.01) (local),,,WinForm,,4346,482,4787,500
+10,Text,Equinor O-3 (13.01) (local),,,WinForm,,4346,482,4787,500
+10,Text,,,,WinForm,,4486,482,4556,500
+10,Text,Liquid,,,WinForm,,4556,482,4696,500
+10,Text,Newtonian,,,WinForm,,4696,482,4787,500
+10,Text,5/14/2025 4:41:35 PM,,,WinForm,,0,0,0,0
+10,Text,bsmith,,,WinForm,,0,0,0,0
+10,Text,Newtonian,,,WinForm,,0,0,0,0
+9,ListItem,Fresh Water,,,WinForm,,4346,500,4787,518
+10,Text,Fresh Water,,,WinForm,,4346,500,4787,518
+10,Text,CTES Read-Only,,,WinForm,,4486,500,4556,518
+10,Text,Liquid,,,WinForm,,4556,500,4696,518
+10,Text,Newtonian,,,WinForm,,4696,500,4787,518
+10,Text,7/30/2018 8:47:55 AM,,,WinForm,,0,0,0,0
+10,Text,CTES,,,WinForm,,0,0,0,0
+10,Text,Newtonian,,,WinForm,,0,0,0,0
+9,ListItem,Fresh Water (Local) (local),,,WinForm,,4346,518,4787,536
+10,Text,Fresh Water (Local) (local),,,WinForm,,4346,518,4787,536
+10,Text,,,,WinForm,,4486,518,4556,536
+10,Text,Liquid,,,WinForm,,4556,518,4696,536
+10,Text,Newtonian,,,WinForm,,4696,518,4787,536
+10,Text,2/26/2025 1:07:49 PM,,,WinForm,,0,0,0,0
+10,Text,bsmith,,,WinForm,,0,0,0,0
+10,Text,Newtonian,,,WinForm,,0,0,0,0
+9,ListItem,Fresh Water local (local),,,WinForm,,4346,536,4787,554
+10,Text,Fresh Water local (local),,,WinForm,,4346,536,4787,554
+10,Text,,,,WinForm,,4486,536,4556,554
+10,Text,Liquid,,,WinForm,,4556,536,4696,554
+10,Text,Newtonian,,,WinForm,,4696,536,4787,554
+10,Text,5/15/2025 7:58:15 AM,,,WinForm,,0,0,0,0
+10,Text,bsmith,,,WinForm,,0,0,0,0
+10,Text,Newtonian,,,WinForm,,0,0,0,0
+9,ListItem,HCl 15%,,,WinForm,,4346,554,4787,572
+10,Text,HCl 15%,,,WinForm,,4346,554,4787,572
+10,Text,CTES Read-Only,,,WinForm,,4486,554,4556,572
+10,Text,Liquid,,,WinForm,,4556,554,4696,572
+10,Text,Newtonian,,,WinForm,,4696,554,4787,572
+10,Text,7/30/2018 8:47:55 AM,,,WinForm,,0,0,0,0
+10,Text,CTES,,,WinForm,,0,0,0,0
+10,Text,Newtonian,,,WinForm,,0,0,0,0
+9,ListItem,HCl 2%,,,WinForm,,4346,572,4787,590
+10,Text,HCl 2%,,,WinForm,,4346,572,4787,590
+10,Text,CTES Read-Only,,,WinForm,,4486,572,4556,590
+10,Text,Liquid,,,WinForm,,4556,572,4696,590
+10,Text,Newtonian,,,WinForm,,4696,572,4787,590
+10,Text,7/30/2018 8:47:55 AM,,,WinForm,,0,0,0,0
+10,Text,CTES,,,WinForm,,0,0,0,0
+10,Text,Newtonian,,,WinForm,,0,0,0,0
+9,ListItem,HCl 28%,,,WinForm,,4346,590,4787,608
+10,Text,HCl 28%,,,WinForm,,4346,590,4787,608
+10,Text,CTES Read-Only,,,WinForm,,4486,590,4556,608
+10,Text,Liquid,,,WinForm,,4556,590,4696,608
+10,Text,Newtonian,,,WinForm,,4696,590,4787,608
+10,Text,7/30/2018 8:47:56 AM,,,WinForm,,0,0,0,0
+10,Text,CTES,,,WinForm,,0,0,0,0
+10,Text,Newtonian,,,WinForm,,0,0,0,0
+9,ListItem,KCl 1%,,,WinForm,,4346,608,4787,613
+10,Text,KCl 1%,,,WinForm,,4346,608,4787,613
+10,Text,CTES Read-Only,,,WinForm,,4486,608,4556,613
+10,Text,Liquid,,,WinForm,,4556,608,4696,613
+10,Text,Newtonian,,,WinForm,,4696,608,4787,613
+10,Text,7/30/2018 8:47:56 AM,,,WinForm,,0,0,0,0
+10,Text,CTES,,,WinForm,,0,0,0,0
+10,Text,Newtonian,,,WinForm,,0,0,0,0
+9,ListItem,KCl 2%,,,WinForm,,0,0,0,0
+10,Text,KCl 2%,,,WinForm,,0,0,0,0
+10,Text,CTES Read-Only,,,WinForm,,0,0,0,0
+10,Text,Liquid,,,WinForm,,0,0,0,0
+10,Text,Newtonian,,,WinForm,,0,0,0,0
+10,Text,7/30/2018 8:47:56 AM,,,WinForm,,0,0,0,0
+10,Text,CTES,,,WinForm,,0,0,0,0
+10,Text,Newtonian,,,WinForm,,0,0,0,0
+9,ListItem,Kerosene,,,WinForm,,0,0,0,0
+10,Text,Kerosene,,,WinForm,,0,0,0,0
+10,Text,CTES Read-Only,,,WinForm,,0,0,0,0
+10,Text,Liquid,,,WinForm,,0,0,0,0
+10,Text,Newtonian,,,WinForm,,0,0,0,0
+10,Text,1/24/2017 7:52:36 AM,,,WinForm,,0,0,0,0
+10,Text,CTES,,,WinForm,,0,0,0,0
+10,Text,Newtonian,,,WinForm,,0,0,0,0
+9,ListItem,NaCl 10%,,,WinForm,,0,0,0,0
+10,Text,NaCl 10%,,,WinForm,,0,0,0,0
+10,Text,CTES Read-Only,,,WinForm,,0,0,0,0
+10,Text,Liquid,,,WinForm,,0,0,0,0
+10,Text,Newtonian,,,WinForm,,0,0,0,0
+10,Text,7/30/2018 8:47:57 AM,,,WinForm,,0,0,0,0
+10,Text,CTES,,,WinForm,,0,0,0,0
+10,Text,Newtonian,,,WinForm,,0,0,0,0
+9,ListItem,NaCl 2%,,,WinForm,,0,0,0,0
+10,Text,NaCl 2%,,,WinForm,,0,0,0,0
+10,Text,CTES Read-Only,,,WinForm,,0,0,0,0
+10,Text,Liquid,,,WinForm,,0,0,0,0
+10,Text,Newtonian,,,WinForm,,0,0,0,0
+10,Text,7/30/2018 8:47:58 AM,,,WinForm,,0,0,0,0
+10,Text,CTES,,,WinForm,,0,0,0,0
+10,Text,Newtonian,,,WinForm,,0,0,0,0
+9,ListItem,Newtonian Water,,,WinForm,,0,0,0,0
+10,Text,Newtonian Water,,,WinForm,,0,0,0,0
+10,Text,CTES Read-Only,,,WinForm,,0,0,0,0
+10,Text,Liquid,,,WinForm,,0,0,0,0
+10,Text,Newtonian,,,WinForm,,0,0,0,0
+10,Text,1/24/2017 7:52:36 AM,,,WinForm,,0,0,0,0
+10,Text,CTES,,,WinForm,,0,0,0,0
+10,Text,Newtonian,,,WinForm,,0,0,0,0
+9,ListItem,Perenco C07 (9.163) (local),,,WinForm,,0,0,0,0
+10,Text,Perenco C07 (9.163) (local),,,WinForm,,0,0,0,0
+10,Text,,,,WinForm,,0,0,0,0
+10,Text,Liquid,,,WinForm,,0,0,0,0
+10,Text,Newtonian,,,WinForm,,0,0,0,0
+10,Text,2/26/2025 11:33:10 AM,,,WinForm,,0,0,0,0
+10,Text,cnorris,,,WinForm,,0,0,0,0
+10,Text,Newtonian,,,WinForm,,0,0,0,0
+9,ListItem,Sea Water,,,WinForm,,0,0,0,0
+10,Text,Sea Water,,,WinForm,,0,0,0,0
+10,Text,CTES Read-Only,,,WinForm,,0,0,0,0
+10,Text,Liquid,,,WinForm,,0,0,0,0
+10,Text,Newtonian,,,WinForm,,0,0,0,0
+10,Text,1/24/2017 7:52:36 AM,,,WinForm,,0,0,0,0
+10,Text,CTES,,,WinForm,,0,0,0,0
+10,Text,Newtonian,,,WinForm,,0,0,0,0
+9,ListItem,Slick Water CF = 0.4,,,WinForm,,0,0,0,0
+10,Text,Slick Water CF = 0.4,,,WinForm,,0,0,0,0
+10,Text,CTES Read-Only,,,WinForm,,0,0,0,0
+10,Text,Liquid,,,WinForm,,0,0,0,0
+10,Text,Newtonian,,,WinForm,,0,0,0,0
+10,Text,1/24/2017 7:52:36 AM,,,WinForm,,0,0,0,0
+10,Text,CTES,,,WinForm,,0,0,0,0
+10,Text,Newtonian,,,WinForm,,0,0,0,0
+3,Text,Selection,lblSelection1,WindowsForms10.STATIC.app.0.141b42a_r7_ad1,WinForm,1642942,4059,640,4119,667
+3,Text,,lblFilterOnMessage,WindowsForms10.STATIC.app.0.141b42a_r7_ad1,WinForm,1446350,4096,284,4459,310
+3,Button,Search,btnSearch,WindowsForms10.BUTTON.app.0.141b42a_r7_ad1,WinForm,2166870,4588,281,4646,303
+3,Button,OK,btnOK,WindowsForms10.BUTTON.app.0.141b42a_r7_ad1,WinForm,1970022,4628,731,4716,754
+3,Button,Delete,btnDelete,WindowsForms10.BUTTON.app.0.141b42a_r7_ad1,WinForm,2428818,4628,731,4716,754
+3,Pane,,BottomPanel,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,790610,4039,799,4833,801
+3,Pane,,LeftPanel,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,3084710,4037,244,4039,801
+3,Pane,,RightPanel,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,5967222,4833,244,4835,801
+3,Pane,,TopPanel,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,462822,4037,218,4835,244
+4,Text,Select a Fluid,lblFormTitle,WindowsForms10.STATIC.app.0.141b42a_r7_ad1,WinForm,1576982,4038,219,4762,245
+4,Pane,_,btnMinimize,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,397796,4762,219,4786,243
+4,Pane,Maximize,btnMaximize,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,397786,4786,219,4810,243
+4,Pane,A,btnCloseForm,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,3083632,4810,219,4834,243
+2,CheckBox,Use well TD,chkWellFlowTD,WindowsForms10.BUTTON.app.0.141b42a_r7_ad1,WinForm,2101232,4498,687,4589,705
+2,Pane,,Panel7,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,986928,4081,736,4607,801
+2,Pane,  Fluids Distribution,txtWellFlowDep,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,659252,4372,689,4492,729
+3,Text,ft,lblUnit,WindowsForms10.STATIC.app.0.141b42a_r7_ad1,WinForm,855870,4434,692,4448,706
+3,Edit,,txtData,WindowsForms10.EDIT.app.0.141b42a_r7_ad1,WinForm,1707796,4372,689,4432,711
+2,Text,Depth (into/out of reservior):,Label30,WindowsForms10.STATIC.app.0.141b42a_r7_ad1,WinForm,1510852,4197,689,4365,704
+2,Text,Well Fluid Flow,Label29,WindowsForms10.STATIC.app.0.141b42a_r7_ad1,WinForm,14814584,4087,690,4180,703
+2,RadioButton,Help info,optHelp,WindowsForms10.BUTTON.app.0.141b42a_r7_ad1,WinForm,1707076,4724,275,4800,293
+2,RadioButton,Well fluids,optWellFluids,WindowsForms10.BUTTON.app.0.141b42a_r7_ad1,WinForm,856046,4640,275,4724,293
+2,Text,View,Label12,WindowsForms10.STATIC.app.0.141b42a_r7_ad1,WinForm,921634,4598,277,4632,291
+2,Button,OK,cmdOK,WindowsForms10.BUTTON.app.0.141b42a_r7_ad1,WinForm,593730,4613,740,4694,767
+2,Button,Cancel,cmdCancel,WindowsForms10.BUTTON.app.0.141b42a_r7_ad1,WinForm,1576294,4701,740,4782,767
+2,Group,No well data,GroupBox5,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,7081592,4058,729,4958,732
+2,Pane,The section bottoms are relative to the core end of the coiled tubing ( i.e. coiled tubing on reel is included in section length). ,Panel3,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,2493918,4598,295,4805,677
+3,Pane,"To edit fluid ( type, density and rheology) or create new fluid, open fluid editor.",WellDiagram1,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,1970208,4600,297,4803,675
+2,Tab,Depth (into/out of reservior):,TabControl1,WindowsForms10.SysTabControl32.app.0.141b42a_r7_ad1,WinForm,3739248,4068,275,4593,677
+3,Pane,RIH,TabPage1,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,1642776,4072,300,4589,673
+4,Pane,,pnlStringFluid,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,2887966,4072,487,4589,673
+5,Text,Pipe Fluid,Label5,WindowsForms10.STATIC.app.0.141b42a_r7_ad1,WinForm,462646,4087,496,4150,509
+5,CheckBox,Advanced fluid profile,chkAdvStringFluids,WindowsForms10.BUTTON.app.0.141b42a_r7_ad1,WinForm,593796,4438,495,4581,513
+5,Pane,Pipe Fluid,Panel2,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,462648,4081,517,4581,652
+6,Pane,The section bottoms are relative to the core end of the coiled tubing ( i.e. coiled tubing on reel is included in section length). ,txtStringDens,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,462778,4165,561,4285,583
+7,Text,lb/gal,lblUnit,WindowsForms10.STATIC.app.0.141b42a_r7_ad1,WinForm,462750,4227,564,4267,578
+7,Edit,,txtData,WindowsForms10.EDIT.app.0.141b42a_r7_ad1,WinForm,462752,4165,561,4225,583
+6,Button,Brine Abby,cmdStringFluidEditor,WindowsForms10.BUTTON.app.0.141b42a_r7_ad1,WinForm,462668,4527,525,4551,549
+6,Button,,cmdOpenStringFluid,WindowsForms10.BUTTON.app.0.141b42a_r7_ad1,WinForm,724992,4491,525,4515,549
+6,Group,,GroupBox2,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,462664,4081,517,4581,520
+6,Text,Liquid,lblStringType,WindowsForms10.STATIC.app.0.141b42a_r7_ad1,WinForm,462680,4165,542,4206,556
+6,Text,Brine Abby,lblStringFluid,WindowsForms10.STATIC.app.0.141b42a_r7_ad1,WinForm,528402,4165,522,4230,536
+6,Text,Density:,Label9,WindowsForms10.STATIC.app.0.141b42a_r7_ad1,WinForm,2429112,4099,562,4159,577
+6,Text,Type:,Label10,WindowsForms10.STATIC.app.0.141b42a_r7_ad1,WinForm,593806,4099,541,4159,556
+6,Text,Fluid:,Label11,WindowsForms10.STATIC.app.0.141b42a_r7_ad1,WinForm,3018078,4099,521,4159,536
+4,CheckBox,Advanced fluid profile,chkAdvWellFluids,WindowsForms10.BUTTON.app.0.141b42a_r7_ad1,WinForm,1772816,4438,309,4581,327
+4,Pane,Well Fluid,Panel1,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,1183082,4081,331,4581,481
+5,Group,,GroupBox1,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,462876,4081,331,4581,334
+5,Button,Brine Abby,cmdWellFluidEditor,WindowsForms10.BUTTON.app.0.141b42a_r7_ad1,WinForm,3542358,4527,339,4551,363
+5,Pane,,txtWellDens,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,659316,4165,382,4285,404
+6,Text,lb/gal,lblUnit,WindowsForms10.STATIC.app.0.141b42a_r7_ad1,WinForm,724858,4227,385,4267,399
+6,Edit,,txtData,WindowsForms10.EDIT.app.0.141b42a_r7_ad1,WinForm,7867624,4165,382,4225,404
+5,Button,,cmdOpenWellFluid,WindowsForms10.BUTTON.app.0.141b42a_r7_ad1,WinForm,1248832,4491,339,4515,363
+5,Text,Liquid,lblWellType,WindowsForms10.STATIC.app.0.141b42a_r7_ad1,WinForm,2494352,4165,363,4206,377
+5,Text,Brine Abby,lblWellFluid,WindowsForms10.STATIC.app.0.141b42a_r7_ad1,WinForm,4460756,4165,343,4230,357
+5,Text,Density:,Label4,WindowsForms10.STATIC.app.0.141b42a_r7_ad1,WinForm,659524,4099,383,4159,398
+5,Text,Type:,Label3,WindowsForms10.STATIC.app.0.141b42a_r7_ad1,WinForm,659532,4099,362,4159,377
+5,Text,Fluid:,Label2,WindowsForms10.STATIC.app.0.141b42a_r7_ad1,WinForm,593876,4099,342,4159,357
+4,Text,Well Fluid,Label1,WindowsForms10.STATIC.app.0.141b42a_r7_ad1,WinForm,659380,4084,310,4147,323
+3,TabItem,RIH,,,,,4070,277,4166,298
+3,TabItem,POOH,,,,,4166,277,4262,298
+2,MenuBar,MenuStrip1,MenuStrip1,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,1118334,4067,242,4805,266
+3,MenuItem,Edit,,,,,4073,244,4113,264
+4,MenuItem,Insert,,,,,0,0,0,0
+4,MenuItem,Delete,,,,,0,0,0,0
+4,MenuItem,Add,,,,,0,0,0,0
+4,Separator,,,,,,0,0,0,0
+4,MenuItem,Select/edit from fluid editor...,,,,,0,0,0,0
+2,Pane,"When multiple fluid segments containing compressible fluid are defined in the well, fluid forces will not be calculated.",BottomPanel,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,4263832,4067,801,4805,803
+2,Pane,"When multiple fluid segments containing compressible fluid are defined in the well, fluid forces will not be calculated.",LeftPanel,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,790488,4065,242,4067,803
+2,Pane,"When multiple fluid segments containing compressible fluid are defined in the well, fluid forces will not be calculated.",RightPanel,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,659372,4805,242,4807,803
+2,Pane,"When multiple fluid segments containing compressible fluid are defined in the well, fluid forces will not be calculated.",TopPanel,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,5509106,4065,216,4807,242
+3,Text,  Fluids Distribution,lblFormTitle,WindowsForms10.STATIC.app.0.141b42a_r7_ad1,WinForm,659294,4090,217,4734,243
+3,Pane,_,btnMinimize,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,659348,4734,217,4758,241
+3,Pane,Maximize,btnMaximize,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,659410,4758,217,4782,241
+3,Pane,A,btnCloseForm,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,1315098,4782,217,4806,241
+3,Pane,"When multiple fluid segments containing compressible fluid are defined in the well, fluid forces will not be calculated.",pnlIcon,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,462660,4066,217,4090,241
+1,Tab,,TCOrpheusMain,WindowsForms10.SysTabControl32.app.0.141b42a_r7_ad1,WinForm,68120,4059,229,4813,870
+2,Pane,   Calculate   ,tpCalculate,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,133750,4063,254,4809,866
+3,Text,Bottom :,Label18,WindowsForms10.STATIC.app.0.141b42a_r7_ad1,WinForm,133738,4611,369,4663,383
+3,Button,TD,btnMaxWellDepth,WindowsForms10.BUTTON.app.0.141b42a_r7_ad1,WinForm,133740,4754,366,4790,390
+3,Pane,,txtBottomDepth,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,133742,4666,367,4740,391
+4,Text,ft,lblUnit,WindowsForms10.STATIC.app.0.141b42a_r7_ad1,WinForm,68232,4726,370,4740,384
+4,Edit,,txtData,WindowsForms10.EDIT.app.0.141b42a_r7_ad1,WinForm,68234,4666,367,4723,387
+3,Pane,,txtTopDepth,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,68236,4666,340,4740,364
+4,Text,ft,lblUnit,WindowsForms10.STATIC.app.0.141b42a_r7_ad1,WinForm,68238,4726,343,4740,357
+4,Edit,,txtData,WindowsForms10.EDIT.app.0.141b42a_r7_ad1,WinForm,68240,4666,340,4723,360
+3,Text,Top :,Label17,WindowsForms10.STATIC.app.0.141b42a_r7_ad1,WinForm,68242,4631,342,4663,356
+3,Text,Depth of Interest :,Label16,WindowsForms10.STATIC.app.0.141b42a_r7_ad1,WinForm,68244,4614,315,4720,329
+3,Button,Project Calculation Options,btnProjectCalculationOptions,WindowsForms10.BUTTON.app.0.141b42a_r7_ad1,WinForm,68246,4613,263,4793,291
+3,Pane,Project Name:,pnlCalculate,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,68248,4069,260,4597,884
+4,Button,...,btnWHP,WindowsForms10.BUTTON.app.0.141b42a_r7_ad1,WinForm,68338,4415,357,4437,379
+4,Pane,lbf,txtWellheadPressurePOOH,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,68490,4344,357,4410,381
+5,Edit,,txtData,WindowsForms10.EDIT.app.0.141b42a_r7_ad1,WinForm,68494,4344,357,4407,377
+4,Pane,,txtWellheadPressureRIH,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,68484,4264,357,4330,381
+5,Edit,,txtData,WindowsForms10.EDIT.app.0.141b42a_r7_ad1,WinForm,68488,4264,357,4327,377
+4,Text,Wellhead Pressure:,lblWellheadPressure,WindowsForms10.STATIC.app.0.141b42a_r7_ad1,WinForm,68498,4103,360,4257,376
+4,Pane,,pnlCalculateRIHPOOH,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,68250,4159,296,4429,320
+5,CheckBox,POOH,chkPOOH,WindowsForms10.BUTTON.app.0.141b42a_r7_ad1,WinForm,68252,4344,298,4400,316
+5,Text,Calculate :,lblCalculate,WindowsForms10.STATIC.app.0.141b42a_r7_ad1,WinForm,68254,4193,299,4257,313
+5,CheckBox,RIH,chkRIH,WindowsForms10.BUTTON.app.0.141b42a_r7_ad1,WinForm,68256,4264,298,4309,316
+4,Pane,,txtSurfaceRotationRIH,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,68258,4264,797,4330,821
+5,Edit,,txtData,WindowsForms10.EDIT.app.0.141b42a_r7_ad1,WinForm,68262,4264,797,4327,817
+4,Pane,,txtSurfaceRotationPOOH,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,68264,4344,797,4410,821
+5,Edit,,txtData,WindowsForms10.EDIT.app.0.141b42a_r7_ad1,WinForm,68268,4344,797,4407,817
+4,Pane,,txtTorqueOnEndRIH,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,68270,4264,772,4330,796
+5,Edit,,txtData,WindowsForms10.EDIT.app.0.141b42a_r7_ad1,WinForm,68274,4264,772,4327,792
+4,Pane,,txtTorqueOnEndPOOH,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,68276,4344,772,4410,796
+5,Edit,,txtData,WindowsForms10.EDIT.app.0.141b42a_r7_ad1,WinForm,68280,4344,772,4407,792
+4,Pane,,txtAxialForceOnEndPOOH,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,68282,4344,747,4410,771
+5,Edit,,txtData,WindowsForms10.EDIT.app.0.141b42a_r7_ad1,WinForm,68286,4344,747,4407,767
+4,Pane,(RIH),txtAxialForceOnEndRIH,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,68288,4264,747,4330,771
+5,Edit,,txtData,WindowsForms10.EDIT.app.0.141b42a_r7_ad1,WinForm,68292,4264,747,4327,767
+4,RadioButton,,rbtnWellCoF,WindowsForms10.BUTTON.app.0.141b42a_r7_ad1,WinForm,68294,4087,495,4101,508
+4,RadioButton,,rbtnProjCoF,WindowsForms10.BUTTON.app.0.141b42a_r7_ad1,WinForm,68296,4087,520,4101,533
+4,Pane,Tractor Force:,pnlAgitator,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,68582,4081,826,4572,856
+5,Button,...,btnAgitators,WindowsForms10.BUTTON.app.0.141b42a_r7_ad1,WinForm,397284,4415,829,4437,851
+5,CheckBox,lbf/(gal/min),chkAgitator,WindowsForms10.BUTTON.app.0.141b42a_r7_ad1,WinForm,724670,4087,833,4102,847
+5,Text,Downhole agitator ratio :,lblAgitator,WindowsForms10.STATIC.app.0.141b42a_r7_ad1,WinForm,724772,4102,832,4256,848
+5,Pane,Downhole agitator ratio :,txtAgitatorRatio,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,397288,4264,830,4330,854
+6,Edit,,txtData,WindowsForms10.EDIT.app.0.141b42a_r7_ad1,WinForm,397184,4264,830,4327,850
+5,Text,lbf/(gal/min),lblUnitsAgitator,WindowsForms10.STATIC.app.0.141b42a_r7_ad1,WinForm,397192,4445,832,4523,846
+4,Button, Drilling (Underbalanced),btnApplication,WindowsForms10.BUTTON.app.0.141b42a_r7_ad1,WinForm,68316,4075,263,4219,290
+4,Button,...,btnTorque,WindowsForms10.BUTTON.app.0.141b42a_r7_ad1,WinForm,68318,4415,771,4437,793
+4,Button,...,btnForce,WindowsForms10.BUTTON.app.0.141b42a_r7_ad1,WinForm,68320,4415,746,4437,768
+4,Text,Surface Rotation:,lblSurfaceRotation,WindowsForms10.STATIC.app.0.141b42a_r7_ad1,WinForm,68322,4102,799,4256,815
+4,Button,,btnFluid,WindowsForms10.BUTTON.app.0.141b42a_r7_ad1,WinForm,68324,4415,617,4437,639
+4,Button,...,btnFluids1,WindowsForms10.BUTTON.app.0.141b42a_r7_ad1,WinForm,68326,4415,586,4437,608
+4,Button,...,btnFluids0,WindowsForms10.BUTTON.app.0.141b42a_r7_ad1,WinForm,68330,4415,561,4437,583
+4,Button,...,btnFriction,WindowsForms10.BUTTON.app.0.141b42a_r7_ad1,WinForm,68334,4413,492,4435,514
+4,Text,Torque on Bit:,lblTorqueOnEnd,WindowsForms10.STATIC.app.0.141b42a_r7_ad1,WinForm,68340,4103,774,4257,790
+4,Button,...,btnSpeed,WindowsForms10.BUTTON.app.0.141b42a_r7_ad1,WinForm,68342,4415,327,4437,349
+4,Text,Weight on Bit :,lblAxialForceOnEnd,WindowsForms10.STATIC.app.0.141b42a_r7_ad1,WinForm,68344,4103,749,4257,765
+4,Pane,,txtLiquidFlowRateInStringRIH,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,68388,4264,617,4330,641
+5,Edit,,txtData,WindowsForms10.EDIT.app.0.141b42a_r7_ad1,WinForm,68392,4264,617,4327,637
+4,Pane,,txtLiquidFlowRateInStringPOOH,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,68394,4344,617,4410,641
+5,Edit,,txtData,WindowsForms10.EDIT.app.0.141b42a_r7_ad1,WinForm,68398,4344,617,4407,637
+4,Text,Liquid Flow Rate:,lblLiquidFlowRateInString,WindowsForms10.STATIC.app.0.141b42a_r7_ad1,WinForm,68400,4103,619,4257,635
+4,Pane,,txtFluidDensityInAnnulusRIH,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,68402,4264,587,4330,611
+5,Edit,,txtData,WindowsForms10.EDIT.app.0.141b42a_r7_ad1,WinForm,68406,4264,587,4327,607
+4,Pane,,txtFluidDensityInAnnulusPOOH,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,68408,4344,587,4410,611
+5,Edit,,txtData,WindowsForms10.EDIT.app.0.141b42a_r7_ad1,WinForm,68412,4344,587,4407,607
+4,Text,Fluid Density in Annulus:,lblFluidDensityInAnnulus,WindowsForms10.STATIC.app.0.141b42a_r7_ad1,WinForm,68414,4102,589,4256,605
+4,Pane,,txtFluidDensityInStringRIH,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,68416,4264,562,4330,586
+5,Edit,,txtData,WindowsForms10.EDIT.app.0.141b42a_r7_ad1,WinForm,68420,4264,562,4327,582
+4,Pane,,txtFluidDensityInStringPOOH,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,68422,4344,562,4410,586
+5,Edit,,txtData,WindowsForms10.EDIT.app.0.141b42a_r7_ad1,WinForm,68426,4344,562,4407,582
+4,Text,Fluid Density in Pipe:,lblFluidDensityInString,WindowsForms10.STATIC.app.0.141b42a_r7_ad1,WinForm,68428,4100,564,4254,580
+4,Pane,,txtProjCoFRIH,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,68430,4264,518,4330,542
+5,Edit,,txtData,WindowsForms10.EDIT.app.0.141b42a_r7_ad1,WinForm,68434,4264,518,4327,538
+4,Pane,,txtProjCoFPOOH,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,68436,4344,518,4410,542
+5,Edit,,txtData,WindowsForms10.EDIT.app.0.141b42a_r7_ad1,WinForm,68440,4344,518,4407,538
+4,Pane,,txtFrictionFactorsRIH,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,68442,4264,493,4330,517
+5,Edit,,txtData,WindowsForms10.EDIT.app.0.141b42a_r7_ad1,WinForm,68446,4264,493,4327,513
+4,Pane,,txtFrictionFactorsPOOH,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,68448,4344,493,4410,517
+5,Edit,,txtData,WindowsForms10.EDIT.app.0.141b42a_r7_ad1,WinForm,68452,4344,493,4407,513
+4,Text,Project Friction Factors :,lblProjCoF,WindowsForms10.STATIC.app.0.141b42a_r7_ad1,WinForm,68454,4100,520,4254,536
+4,Text,Friction Factors:,lblFrictionFactors,WindowsForms10.STATIC.app.0.141b42a_r7_ad1,WinForm,68456,4102,495,4256,511
+4,Pane,,txtReelBackTensionRIH,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,68586,4264,463,4330,487
+5,Edit,,txtData,WindowsForms10.EDIT.app.0.141b42a_r7_ad1,WinForm,1445538,4264,463,4327,483
+4,Pane,,txtReelBackTensionPOOH,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,68588,4344,463,4410,487
+5,Edit,,txtData,WindowsForms10.EDIT.app.0.141b42a_r7_ad1,WinForm,397292,4344,463,4407,483
+4,Text,Travelling Block Weight:,lblReelBackTension,WindowsForms10.STATIC.app.0.141b42a_r7_ad1,WinForm,68590,4103,465,4257,481
+4,Pane,,txtStripperFrictionRIH,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,68458,4264,438,4330,462
+5,Edit,,txtData,WindowsForms10.EDIT.app.0.141b42a_r7_ad1,WinForm,68462,4264,438,4327,458
+4,Pane,,txtStripperFrictionPOOH,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,68464,4344,438,4410,462
+5,Edit,,txtData,WindowsForms10.EDIT.app.0.141b42a_r7_ad1,WinForm,68468,4344,438,4407,458
+4,Text,Stripper Friction:,lblStripperFriction,WindowsForms10.STATIC.app.0.141b42a_r7_ad1,WinForm,68470,4103,440,4257,456
+4,Pane,,txtSpeedRIH,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,68514,4264,328,4330,352
+5,Edit,,txtData,WindowsForms10.EDIT.app.0.141b42a_r7_ad1,WinForm,68518,4264,328,4327,348
+4,Pane,,txtSpeedPOOH,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,68520,4344,328,4410,352
+5,Edit,,txtData,WindowsForms10.EDIT.app.0.141b42a_r7_ad1,WinForm,68524,4344,328,4407,348
+4,Text,Pipe Speed:,lblTrippingSpeed,WindowsForms10.STATIC.app.0.141b42a_r7_ad1,WinForm,68526,4103,330,4257,346
+4,Pane,(POOH),pnlUnits,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,68528,4442,322,4504,820
+5,Text,psi,lblUnitsWellheadPressure,WindowsForms10.STATIC.app.0.141b42a_r7_ad1,WinForm,68554,4445,360,4469,374
+5,Text,rpm,lblUnitsRotation,WindowsForms10.STATIC.app.0.141b42a_r7_ad1,WinForm,68532,4445,799,4473,813
+5,Text,ft·lbf,lblUnitsTorque,WindowsForms10.STATIC.app.0.141b42a_r7_ad1,WinForm,68534,4445,774,4477,788
+5,Text,lbf,lblUnitsAxialForce,WindowsForms10.STATIC.app.0.141b42a_r7_ad1,WinForm,68536,4445,749,4467,763
+5,Text,gal/min,lblUnitsLiqRateString,WindowsForms10.STATIC.app.0.141b42a_r7_ad1,WinForm,68544,4445,619,4495,633
+5,Text,lb/gal,lblUnitsFluidDenAnn,WindowsForms10.STATIC.app.0.141b42a_r7_ad1,WinForm,68546,4445,589,4485,603
+5,Text,lb/gal,lblUnitsFluidDenString,WindowsForms10.STATIC.app.0.141b42a_r7_ad1,WinForm,68548,4445,564,4485,578
+5,Text,lbf,lblUnitsReelBackTension,WindowsForms10.STATIC.app.0.141b42a_r7_ad1,WinForm,68592,4445,465,4467,479
+5,Text,lbf,lblUnitsStripperFriction,WindowsForms10.STATIC.app.0.141b42a_r7_ad1,WinForm,68552,4445,440,4467,454
+5,Text,ft/min,lblUnitsSpeed,WindowsForms10.STATIC.app.0.141b42a_r7_ad1,WinForm,68558,4445,330,4485,344
+4,CheckBox,Use same data for RIH & POOH,chkSameRIHandPOOH,WindowsForms10.BUTTON.app.0.141b42a_r7_ad1,WinForm,68560,4381,269,4586,287
+3,Pane,Top :,pnlCalcButtons,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,68562,4602,416,4800,802
+4,Button,Calculation Tools,btnCalculationTools,WindowsForms10.BUTTON.app.0.141b42a_r7_ad1,WinForm,68564,4611,704,4791,732
+4,Button,Force Regions,btnForceRegions,WindowsForms10.BUTTON.app.0.141b42a_r7_ad1,WinForm,68566,4611,665,4791,693
+4,Button,Maximum Overpull,btnMaximumPickupForce,WindowsForms10.BUTTON.app.0.141b42a_r7_ad1,WinForm,68568,4611,632,4791,660
+4,Button,Maximum Set-Down Force,btnMaximumSetDownForce,WindowsForms10.BUTTON.app.0.141b42a_r7_ad1,WinForm,68570,4611,599,4791,627
+4,Button,Forces on Pipe,btnForceOnToolAndCable,WindowsForms10.BUTTON.app.0.141b42a_r7_ad1,WinForm,68572,4611,566,4791,594
+4,Button,Calculate Maximum Depth,btnLockup,WindowsForms10.BUTTON.app.0.141b42a_r7_ad1,WinForm,68574,4611,461,4791,489
+4,Button,Run at Depth,btnRunAtDepth,WindowsForms10.BUTTON.app.0.141b42a_r7_ad1,WinForm,68576,4611,527,4791,555
+4,Button,Trip In and Out,btnTripInAndOut,WindowsForms10.BUTTON.app.0.141b42a_r7_ad1,WinForm,68578,4611,494,4791,522
+4,Button,Report Generator...,btnReportGenerator,WindowsForms10.BUTTON.app.0.141b42a_r7_ad1,WinForm,68580,4611,422,4791,450
+2,TabItem, Configuration ,,,,,4061,231,4157,252
+2,TabItem,   Calculate   ,,,,,4157,231,4253,252
+2,TabItem,      Q & A        ,,,,,4253,231,4349,252
+1,ToolBar,ToolStrip1,ToolStrip1,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,68156,4059,198,4813,229
+2,Thumb,Grip,,,,,4061,198,4064,229
+2,Button,Exit,,,,,4066,199,4094,227
+2,Separator,,,,,,4094,198,4100,229
+2,Button,,,,,,4100,199,4128,227
+2,Button,Open Project,,,,,4128,199,4156,227
+2,Button,,,,,,4156,199,4184,227
+2,Separator,,,,,,4184,198,4190,229
+2,Button,,,,,,4190,199,4218,227
+2,Separator,,,,,,4218,198,4224,229
+2,Button,,,,,,4224,199,4252,227
+2,Button,Tool String,,,,,4252,199,4280,227
+2,Button,Well Geometry,,,,,4280,199,4308,227
+2,Text,                    ,,,,,4308,199,4375,227
+2,Button,Job Monitor,,,,,4375,199,4403,227
+2,Text,Send to CTES Live,,,,,4403,199,4502,227
+2,Text,          ,,,,,4775,199,4812,227
+2,Button,,,,,,4747,199,4775,227
+1,MenuBar,MenuStrip1,MenuStrip1,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,131330,4059,174,4813,198
+2,MenuItem,File,,,,,4065,176,4105,196
+3,MenuItem,New Project...,,,,,0,0,0,0
+3,MenuItem,Open...,,,,,0,0,0,0
+3,MenuItem,Save,,,,,0,0,0,0
+3,MenuItem,Save As...,,,,,0,0,0,0
+3,MenuItem,Delete,,,,,0,0,0,0
+3,Separator,,,,,,0,0,0,0
+3,MenuItem,Import Project...,,,,,0,0,0,0
+3,MenuItem,Export Project...,,,,,0,0,0,0
+3,Separator,,,,,,0,0,0,0
+3,MenuItem,Print...,,,,,0,0,0,0
+3,MenuItem,E-Mail Project To...,,,,,0,0,0,0
+3,MenuItem,Exit,,,,,0,0,0,0
+2,MenuItem,Configuration,,,,,4105,176,4195,196
+3,MenuItem,String...,,,,,0,0,0,0
+3,MenuItem,BHA...,,,,,0,0,0,0
+3,Separator,,,,,,0,0,0,0
+3,MenuItem,Well Geometry...,,,,,0,0,0,0
+3,Separator,,,,,,0,0,0,0
+3,MenuItem,Fluids...,,,,,0,0,0,0
+3,Separator,,,,,,0,0,0,0
+3,MenuItem,Weak Point...,,,,,0,0,0,0
+3,MenuItem,Torque Inputs...,,,,,0,0,0,0
+2,MenuItem,Options,,,,,4195,176,4256,196
+3,MenuItem,Units...,,,,,0,0,0,0
+3,MenuItem,Project Calculation Options...,,,,,0,0,0,0
+2,MenuItem,Tools,,,,,4256,176,4304,196
+3,MenuItem,Sensitivity Analysis...,,,,,0,0,0,0
+3,MenuItem,Report Generator...,,,,,0,0,0,0
+3,MenuItem,Tool Fit Analysis...,,,,,0,0,0,0
+3,MenuItem,Extended Reach...,,,,,0,0,0,0
+3,MenuItem,Friction Coefficient Analysis...,,,,,0,0,0,0
+3,MenuItem,Free Fall Analysis...,,,,,0,0,0,0
+3,Separator,,,,,,0,0,0,0
+3,MenuItem,Stuck Point Analysis...,,,,,0,0,0,0
+2,MenuItem,Help,,,,,4304,176,4349,196
+3,MenuItem,Help on Orpheus,,,,,0,0,0,0
+3,MenuItem,Orpheus Wizard,,,,,0,0,0,0
+3,MenuItem,About Orpheus...,,,,,0,0,0,0
+1,Pane,Bottom :,BottomPanel,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,68158,4059,870,4813,872
+1,Pane,Bottom :,LeftPanel,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,68160,4057,174,4059,872
+1,Pane,Bottom :,RightPanel,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,68162,4813,174,4815,872
+1,Pane,Bottom :,TopPanel,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,68164,4057,148,4815,174
+2,Text,Orpheus - <Abbey A-02 (local)>     ,lblFormTitle,WindowsForms10.STATIC.app.0.141b42a_r7_ad1,WinForm,68166,4082,149,4766,175
+2,Pane,_,btnMinimize,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,68168,4766,149,4790,173
+2,Pane,A,btnCloseForm,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,68174,4790,149,4814,173
+2,Pane,Bottom :,pnlIcon,WindowsForms10.Window.8.app.0.141b42a_r7_ad1,WinForm,68176,4058,149,4082,173
