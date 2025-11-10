@@ -4,7 +4,7 @@ import pandas as pd
 import time
 import threading
 import ctypes
-from Autoamtion import run_automation_for_inputs
+from Automation import run_automation_for_inputs
 
 class AutomationGUI:
     def __init__(self, root):
