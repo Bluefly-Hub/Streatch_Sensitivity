@@ -167,7 +167,7 @@ class Button_Repository:
 
 
         # Wait for frmOrpheusGraph window to appear
-        #time.sleep(0.5)  # Short delay for window to start appearing
+        time.sleep(0.5)  # Short delay for window to start appearing
         max_wait = 10  # Maximum seconds to wait
         start_time = time.time()
         while time.time() - start_time < max_wait:
@@ -179,7 +179,7 @@ class Button_Repository:
                 self.Bypass_Hydraulic_Error()
             if graph_window is not None:
                 break
-            #time.sleep(0.2)
+            time.sleep(0.2)
 
 
     def Drop_Down_Streatcher(self):
@@ -193,7 +193,7 @@ class Button_Repository:
             graph_window = find_element_fast(self.root, "frmOrpheusGraph")
             if graph_window is not None:
                 break
-            #time.sleep(0.2)
+            time.sleep(0.2)
         
         if graph_window is None:
             raise Exception("frmOrpheusGraph window not ready for dropdown")
@@ -307,7 +307,7 @@ class Button_Repository:
             graph_window = find_element_fast(self.root, "frmOrpheusGraph")
             if graph_window is not None:
                 break
-            #time.sleep(0.2)
+            time.sleep(0.2)
         
         if graph_window is None:
             raise Exception("frmOrpheusGraph window not ready for OK button")
@@ -323,7 +323,7 @@ class Button_Repository:
         No_button_element = find_element_fast(self.root, "btnNo")
         self.No_button_element = No_button_element  
         No_button_element.click()
-        #time.sleep(0.5)  # Wait a moment for OK button to appear
+        time.sleep(0.2)  # Wait a moment for OK button to appear
         Ok_button_element = find_element_fast(self.root, "btnOK")
         self.OK_Button_element = Ok_button_element  
         Ok_button_element.click()
