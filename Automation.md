@@ -31,13 +31,81 @@
   - PATCH: Bug fixes
 
 ### Build Process (Python Projects)
+
+#### Prerequisites for Executable Creation
+Before building executables with PyInstaller, ensure your environment is properly configured:
+
+**Python Version:**
+- **Use Python 3.14** (or latest stable) for best compatibility
+- Python 3.14 has pre-built wheels for common packages (pandas, numpy, etc.)
+- Earlier versions (3.13 and below) may require Visual Studio for compiling packages from source
+- Verify Python version: `python --version` or `py -3.14 --version`
+
+**Virtual Environment Setup:**
+- **Always use a clean virtual environment** (`.venv`) for building executables
+- PyInstaller bundles packages from the active environment
+- Corrupted environments lead to missing dependencies or import errors at runtime
+- Create fresh venv if encountering build issues: `py -3.14 -m venv .venv`
+- Always activate venv before building: `.\.venv\Scripts\Activate.ps1` (PowerShell)
+
+**Package Installation:**
+- Install all dependencies in the virtual environment first
+- **Install PyInstaller in the same venv**: `python -m pip install pyinstaller`
+- Install application dependencies: `python -m pip install -r requirements.txt`
+- Verify installations: `pip list` should show all packages including pyinstaller
+- Use `python -m pip install` instead of `pip install` to ensure correct Python instance
+
+**Windows Long Path Limitations:**
+- Windows has a 260 character path limit by default
+- Build artifacts can exceed this limit, causing Git commit failures
+- **Solutions (choose one):**
+  1. Use `.gitignore` to exclude `build/`, `dist/`, `.venv/` (recommended)
+  2. Enable Windows long paths: Run as Admin → `New-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem" -Name "LongPathsEnabled" -Value 1 -PropertyType DWORD -Force`
+  3. Git config: `git config --system core.longpaths true`
+- Enabling long paths is safe and has no performance impact
+- Always exclude build artifacts from version control regardless
+
+**Common Build Issues & Solutions:**
+- **"No module named 'X'" at runtime**: Module not bundled properly
+  - Verify package is installed in venv: `pip list`
+  - Check imports in your code match installed package names
+  - Use `--clean` flag to rebuild from scratch
+  - Add hidden imports if needed: `--hidden-import=module_name`
+  
+- **"pandas" or "numpy" fails to install (Python 3.13 and below)**:
+  - Missing Visual Studio C++ compiler for building from source
+  - Solution: Upgrade to Python 3.14 (has pre-built wheels)
+  - Alternative: Install Visual Studio Build Tools (large download)
+  
+- **PyInstaller uses wrong Python version**:
+  - Ensure virtual environment is activated before running PyInstaller
+  - Use full path: `.\.venv\Scripts\python.exe -m PyInstaller ...`
+  - Verify with: `python --version` should show correct version
+  
+- **"Access denied" or locked files during build**:
+  - Close the running executable before rebuilding
+  - Delete `dist/` and `build/` folders manually if needed
+  - Use `--clean` flag to force clean build
+
+**Build Commands:**
 - Use PyInstaller for creating Windows executables
 - Always use `--onefile` flag for single executable distribution
 - Use `--windowed` flag for GUI applications (no console window)
 - Use `--console` or omit flag for CLI applications
-- Standard build command: `pyinstaller --onefile --windowed --name "AppName" main.py`
+- Standard build command: `python -m PyInstaller --onefile --windowed --name "AppName" main.py`
+- Use `--clean` flag if encountering caching issues: add `--clean` to command
 - Distribute only the final `.exe` file from the `dist/` folder
 - Test executables on clean machines without Python installed
+
+**Build Checklist:**
+1. ✅ Python 3.14 (or latest stable) installed
+2. ✅ Clean virtual environment created and activated
+3. ✅ All dependencies installed in venv (including pyinstaller)
+4. ✅ `.gitignore` configured to exclude build artifacts
+5. ✅ Close any running instances of previous builds
+6. ✅ Run build command from activated venv
+7. ✅ Test executable before distribution
+8. ✅ Create GitHub release and upload executable
 
 ### Code Organization
 - Keep entry point simple and clear (`main.py`, `app.py`, or similar)
@@ -106,23 +174,62 @@
 
 ### Setup New Python Environment
 ```powershell
-# Create virtual environment
-python -m venv .venv
+# Create virtual environment with Python 3.14
+py -3.14 -m venv .venv
 
 # Activate (PowerShell)
 .\.venv\Scripts\Activate.ps1
 
+# Verify Python version in venv
+python --version
+
 # Install dependencies
-pip install -r requirements.txt
+python -m pip install -r requirements.txt
+
+# Install PyInstaller for building executables
+python -m pip install pyinstaller
 ```
 
 ### Build Executable (PyInstaller)
 ```powershell
-# GUI Application (no console)
-pyinstaller --onefile --windowed --name "AppName" main.py
+# IMPORTANT: Activate virtual environment first!
+.\.venv\Scripts\Activate.ps1
 
-# CLI Application (with console)
-pyinstaller --onefile --name "AppName" main.py
+# GUI Application (no console window)
+python -m PyInstaller --onefile --windowed --name "AppName" main.py
+
+# CLI Application (with console window)
+python -m PyInstaller --onefile --name "AppName" main.py
+
+# Clean build (if having issues)
+python -m PyInstaller --onefile --windowed --name "AppName" --clean main.py
+
+# Executable will be in: dist\AppName.exe
+```
+
+### Troubleshooting Build Issues
+```powershell
+# Check if PyInstaller is installed in venv
+pip list | Select-String pyinstaller
+
+# Verify active Python version
+python --version
+
+# List all installed packages
+pip list
+
+# Rebuild virtual environment from scratch
+Remove-Item -Recurse -Force .venv
+py -3.14 -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt
+python -m pip install pyinstaller
+
+# Enable Windows long paths (Run as Administrator)
+New-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem" -Name "LongPathsEnabled" -Value 1 -PropertyType DWORD -Force
+
+# Enable Git long paths
+git config --system core.longpaths true
 ```
 
 ### Update Dependencies

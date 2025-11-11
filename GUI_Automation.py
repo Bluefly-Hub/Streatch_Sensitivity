@@ -5,11 +5,12 @@ import time
 import threading
 import ctypes
 from Automation import run_automation_for_inputs
+from version import VERSION
 
 class AutomationGUI:
     def __init__(self, root):
         self.root = root
-        self.root.title("Cerberus Streatch Sensitivity Automation")
+        self.root.title(f"Cerberus Streatch Sensitivity Automation v{VERSION}")
         self.root.geometry("1000x700")
         
         # Data storage

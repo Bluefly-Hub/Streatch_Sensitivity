@@ -19,6 +19,9 @@ class AutoUpdater:
     
     GITHUB_REPO = "Bluefly-Hub/Cerberus_Streatch_Sensitivity"
     GITHUB_API_URL = f"https://api.github.com/repos/{GITHUB_REPO}/releases/latest"
+    # Optional: Add your GitHub Personal Access Token here for private repos
+    # Create token at: https://github.com/settings/tokens (needs 'repo' scope)
+    GITHUB_TOKEN = None  # Set to "ghp_yourtoken..." for private repos
     
     def __init__(self):
         self.current_version = __version__
@@ -30,10 +33,11 @@ class AutoUpdater:
         """
         try:
             # Make request to GitHub API
-            req = urllib.request.Request(
-                self.GITHUB_API_URL,
-                headers={'User-Agent': 'WellAutomation-Updater'}
-            )
+            headers = {'User-Agent': 'WellAutomation-Updater'}
+            if self.GITHUB_TOKEN:
+                headers['Authorization'] = f'token {self.GITHUB_TOKEN}'
+            
+            req = urllib.request.Request(self.GITHUB_API_URL, headers=headers)
             
             with urllib.request.urlopen(req, timeout=5) as response:
                 data = json.loads(response.read().decode())

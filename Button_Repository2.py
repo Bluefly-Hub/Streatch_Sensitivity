@@ -150,26 +150,37 @@ class Button_Repository:
         """Find and return Trip In and Trip Out button"""
         # Refresh root in case UI state changed
         self.root = self.app.top_window().element_info.element
+
+        
+
         
         Trip_In_Out = find_element_fast(self.root, "btnTripInAndOut")
         if Trip_In_Out is None:
             raise Exception("Could not find btnTripInAndOut - UI may not be in correct state")
         
         self.Trip_In_Out = Trip_In_Out
+
         Trip_In_Out.set_focus()
         Trip_In_Out.click_input()
-        
+
+
+
+
         # Wait for frmOrpheusGraph window to appear
-        time.sleep(0.5)  # Short delay for window to start appearing
+        #time.sleep(0.5)  # Short delay for window to start appearing
         max_wait = 10  # Maximum seconds to wait
         start_time = time.time()
         while time.time() - start_time < max_wait:
             graph_window = find_element_fast(self.root, "frmOrpheusGraph")
+
+            Error_Window= find_element_fast(self.root, "CTESMessageBox")
+            if Error_Window is not None:
+                Error_Window= find_element_fast(self.root, "CTESMessageBox")
+                self.Bypass_Hydraulic_Error()
             if graph_window is not None:
                 break
-            time.sleep(0.2)
-        else:
-            raise Exception("frmOrpheusGraph window did not appear after Trip In/Out button click")
+            #time.sleep(0.2)
+
 
     def Drop_Down_Streatcher(self):
         """Find and click the Drop Down Stretcher button"""
@@ -182,7 +193,7 @@ class Button_Repository:
             graph_window = find_element_fast(self.root, "frmOrpheusGraph")
             if graph_window is not None:
                 break
-            time.sleep(0.2)
+            #time.sleep(0.2)
         
         if graph_window is None:
             raise Exception("frmOrpheusGraph window not ready for dropdown")
@@ -296,7 +307,7 @@ class Button_Repository:
             graph_window = find_element_fast(self.root, "frmOrpheusGraph")
             if graph_window is not None:
                 break
-            time.sleep(0.2)
+            #time.sleep(0.2)
         
         if graph_window is None:
             raise Exception("frmOrpheusGraph window not ready for OK button")
@@ -305,7 +316,17 @@ class Button_Repository:
         self.OK_Button_element = OK_Button_element  # Renamed to avoid shadowing the method
         OK_Button_element.click()
         
-
+    def Bypass_Hydraulic_Error(self):
+        """Find and click the No button"""
+        # Refresh root in case UI state changed
+        self.root = self.app.top_window().element_info.element
+        No_button_element = find_element_fast(self.root, "btnNo")
+        self.No_button_element = No_button_element  
+        No_button_element.click()
+        #time.sleep(0.5)  # Wait a moment for OK button to appear
+        Ok_button_element = find_element_fast(self.root, "btnOK")
+        self.OK_Button_element = Ok_button_element  
+        Ok_button_element.click()
 
 class Cerbers_functions:
     """High-level automation workflows using Button_Repository"""
