@@ -278,12 +278,19 @@ class AutomationGUI:
             self.automation_start_time = None
     
     def copy_results(self):
-        """Copy results to clipboard in CSV format (comma-delimited for Excel)"""
+        """Copy results to clipboard in tab-delimited format (Excel-ready)"""
         if self.output_df is not None:
+            # Remove any empty rows and reset index
+            clean_df = self.output_df.dropna(how='all').reset_index(drop=True)
+            
+            # Fill NaN with empty strings and convert to string for clean paste
+            clean_df = clean_df.fillna("")
+            clean_df = clean_df.astype(str)
+            
             self.root.clipboard_clear()
-            # Use to_csv with tab=False to get comma-delimited format
-            csv_string = self.output_df.to_csv(index=False)
-            self.root.clipboard_append(csv_string)
+            # Use tab delimiter for direct Excel paste (no need to delimit)
+            excel_string = clean_df.to_csv(index=False, sep='\t', lineterminator='\n')
+            self.root.clipboard_append(excel_string)
             # Silent on success - no popup
         else:
             messagebox.showwarning("No Results", "Please run the automation first.")
@@ -291,13 +298,16 @@ class AutomationGUI:
     def export_csv(self):
         """Export results to CSV file"""
         if self.output_df is not None:
+            # Remove any empty rows before exporting
+            clean_df = self.output_df.dropna(how='all')
+            
             from tkinter import filedialog
             filename = filedialog.asksaveasfilename(
                 defaultextension=".csv",
                 filetypes=[("CSV files", "*.csv"), ("All files", "*.*")]
             )
             if filename:
-                self.output_df.to_csv(filename, index=False)
+                clean_df.to_csv(filename, index=False)
                 messagebox.showinfo("Success", f"Results exported to {filename}")
         else:
             messagebox.showwarning("No Results", "Please run the automation first.")
