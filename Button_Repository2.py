@@ -284,28 +284,21 @@ class Button_Repository:
         # self.root is already current from previous methods
         
         menu = find_element_fast(self.root, "menuOrpheusGraph")
-        if menu is None:
-            raise Exception("Could not find menuOrpheusGraph - UI may not be in correct state")
         
         menu_element = menu.element_info.element
 
         # Try to find by automation_id first (faster), fallback to title
-        data = find_element_fast(self.root, "mnuData")
-        if data is None:
-            data = find_element_by_title(self.root, "Data")
-        
-        Modeled_Data = find_element_fast(menu_element, "mnuModeledData")
-        if Modeled_Data is None:
-            Modeled_Data = find_element_by_title(menu_element, "Modeled Data...")
 
-        if data is None or Modeled_Data is None:
-            raise Exception("Could not find Data or Modeled Data menu items")
+        data = find_element_by_title(self.root, "Data")
+        
+
+        Modeled_Data = find_element_by_title(menu_element, "Modeled Data...")
 
         self.data = data
         self.Modeled_Data = Modeled_Data
 
         data.set_focus()
-        data.click_input()
+        data.expand()
         Modeled_Data.click_input() 
 
     def Modeled_Data_df(self):
