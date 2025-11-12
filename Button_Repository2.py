@@ -7,17 +7,57 @@ from pywinauto.uia_defines import get_elem_interface
 import time
 import comtypes.client
 from comtypes.gen.UIAutomationClient import IUIAutomation, TreeScope_Descendants
+from datetime import datetime
+import csv
+from pathlib import Path
 
+
+# Performance logging
+_performance_log = []
 
 def timer(func):
-    """Decorator to time function execution"""
+    """Decorator to time function execution and log to file"""
     def wrapper(*args, **kwargs):
         start = time.perf_counter()
         result = func(*args, **kwargs)
         end = time.perf_counter()
-        print(f"{func.__name__}: {(end - start):.3f}s")
+        elapsed = end - start
+        
+        # Print to console
+        print(f"{func.__name__}: {elapsed:.3f}s")
+        
+        # Log to memory
+        _performance_log.append({
+            'timestamp': datetime.now().isoformat(),
+            'function': func.__name__,
+            'elapsed': f"{elapsed:.3f}"
+        })
+        
         return result
     return wrapper
+
+def save_performance_log(filename="performance_log.csv"):
+    """Save performance log to CSV file"""
+    if not _performance_log:
+        return
+    
+    log_path = Path(__file__).parent / filename
+    
+    # Check if file exists to determine if we need headers
+    file_exists = log_path.exists()
+    
+    with open(log_path, 'a', newline='') as f:
+        fieldnames = ['timestamp', 'function', 'elapsed']
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        
+        if not file_exists:
+            writer.writeheader()
+        
+        writer.writerows(_performance_log)
+    
+    print(f"\nPerformance log saved to: {log_path}")
+    _performance_log.clear()
+
 
 def find_element_fast(root_element, automation_id, found_index=0):
     """
@@ -106,15 +146,28 @@ class Button_Repository:
         
         # Find the second frmFluids window (editor window)
         frmFluids_editor = find_element_fast(self.root, "frmFluids", found_index=1)
+        
+        if frmFluids_editor is None:
+            raise Exception("Could not find fluid editor window (frmFluids index 1)")
+        
         frmFluids_editor_element = frmFluids_editor.element_info.element
         
-        # Find toolbar within the editor window
+        # Find toolbar within the editor window - try automation_id first
         ToolStrip = find_element_fast(frmFluids_editor_element, "ToolStrip1")
+        
+        if ToolStrip is None:
+            raise Exception("Could not find ToolStrip1")
+        
         ToolStrip_element = ToolStrip.element_info.element
         
-        # Find Save and Exit buttons within toolbar
-        Save_fluid = find_element_by_title(ToolStrip_element, "Save")
-        Exit_fluid = find_element_by_title(ToolStrip_element, "Exit")
+        # Try to find Save/Exit by automation_id first (faster), fallback to title
+        Save_fluid = find_element_fast(ToolStrip_element, "tsbSave")
+        if Save_fluid is None:
+            Save_fluid = find_element_by_title(ToolStrip_element, "Save")
+        
+        Exit_fluid = find_element_fast(ToolStrip_element, "tsbExit") 
+        if Exit_fluid is None:
+            Exit_fluid = find_element_by_title(ToolStrip_element, "Exit")
 
         # Store the UI elements in self (without executing actions)
         self.Edit_Density = Edit_Density
@@ -146,6 +199,7 @@ class Button_Repository:
         WHP_POOH.set_text(str(WHP_value))
         WHP_RIH.set_text(str(WHP_value))
 
+    @timer
     def Trip_in_Out_Buttons(self):
         """Find and return Trip In and Trip Out button"""
         # Refresh root in case UI state changed
@@ -163,40 +217,52 @@ class Button_Repository:
         Trip_In_Out.set_focus()
         Trip_In_Out.click_input()
 
-
-
-
-        # Wait for frmOrpheusGraph window to appear
-        time.sleep(0.5)  # Short delay for window to start appearing
+        # Wait for frmOrpheusGraph window to appear - optimized polling
         max_wait = 10  # Maximum seconds to wait
         start_time = time.time()
+        poll_interval = 0.05  # Check every 50ms instead of 200ms
+        
         while time.time() - start_time < max_wait:
-            graph_window = find_element_fast(self.root, "frmOrpheusGraph")
-
-            Error_Window= find_element_fast(self.root, "CTESMessageBox")
+            # Refresh root to catch new windows
+            self.root = self.app.top_window().element_info.element
+            
+            # Check for error window first (higher priority)
+            Error_Window = find_element_fast(self.root, "CTESMessageBox")
             if Error_Window is not None:
-                Error_Window= find_element_fast(self.root, "CTESMessageBox")
                 self.Bypass_Hydraulic_Error()
+                continue  # Keep waiting for graph window after handling error
+            
+            # Check for graph window
+            graph_window = find_element_fast(self.root, "frmOrpheusGraph")
             if graph_window is not None:
                 break
-            time.sleep(0.2)
+            
+            time.sleep(poll_interval)
 
-
+    @timer
     def Drop_Down_Streatcher(self):
         """Find and click the Drop Down Stretcher button"""
-        # Wait for frmOrpheusGraph to be ready
-        max_wait = 10
-        start_time = time.time()
-        graph_window = None
-        while time.time() - start_time < max_wait:
-            self.root = self.app.top_window().element_info.element
-            graph_window = find_element_fast(self.root, "frmOrpheusGraph")
-            if graph_window is not None:
-                break
-            time.sleep(0.2)
+        # Graph window should already exist from Trip_in_Out_Buttons
+        # Try direct search first before polling
+        Drop_Down_Stretcher = find_element_fast(self.root, "cmbGraphType")
         
-        if graph_window is None:
-            raise Exception("frmOrpheusGraph window not ready for dropdown")
+        # If not found immediately, poll with short timeout
+        if Drop_Down_Stretcher is None:
+            max_wait = 2  # Very short timeout since window should exist
+            start_time = time.time()
+            poll_interval = 0.05
+            
+            while time.time() - start_time < max_wait:
+                self.root = self.app.top_window().element_info.element
+                graph_window = find_element_fast(self.root, "frmOrpheusGraph")
+                if graph_window is not None:
+                    Drop_Down_Stretcher = find_element_fast(self.root, "cmbGraphType")
+                    if Drop_Down_Stretcher is not None:
+                        break
+                time.sleep(poll_interval)
+        
+        if Drop_Down_Stretcher is None:
+            raise Exception("Could not find cmbGraphType dropdown - UI may not be in correct state")
         
         Drop_Down_Stretcher = find_element_fast(self.root, "cmbGraphType")
         if Drop_Down_Stretcher is None:
@@ -211,10 +277,11 @@ class Button_Repository:
             # If select worked but threw an error, just warn and continue
             print(f"Warning: Dropdown select had issue but may have succeeded: {e}")
 
+    @timer
     def Modeled_Data_Button(self):
         """Find and click the Modeled Data button"""
-        # Refresh root in case UI state changed
-        self.root = self.app.top_window().element_info.element
+        # Don't refresh root unnecessarily - reuse cached root
+        # self.root is already current from previous methods
         
         menu = find_element_fast(self.root, "menuOrpheusGraph")
         if menu is None:
@@ -222,8 +289,14 @@ class Button_Repository:
         
         menu_element = menu.element_info.element
 
-        data = find_element_by_title(self.root, "Data")  # Fixed: use self.root, not menu.root
-        Modeled_Data = find_element_by_title(menu_element, "Modeled Data...")
+        # Try to find by automation_id first (faster), fallback to title
+        data = find_element_fast(self.root, "mnuData")
+        if data is None:
+            data = find_element_by_title(self.root, "Data")
+        
+        Modeled_Data = find_element_fast(menu_element, "mnuModeledData")
+        if Modeled_Data is None:
+            Modeled_Data = find_element_by_title(menu_element, "Modeled Data...")
 
         if data is None or Modeled_Data is None:
             raise Exception("Could not find Data or Modeled Data menu items")
@@ -296,18 +369,21 @@ class Button_Repository:
         df = df.iloc[:, 1:]  # Drop first column
         return df
         
+    @timer
     def OK_Button(self):
         """Find and click the OK button"""
         # Wait for frmOrpheusGraph to be ready
-        max_wait = 10
+        max_wait = 5  # Reduced from 10
         start_time = time.time()
+        poll_interval = 0.05  # Check every 50ms
         graph_window = None
+        
         while time.time() - start_time < max_wait:
             self.root = self.app.top_window().element_info.element
             graph_window = find_element_fast(self.root, "frmOrpheusGraph")
             if graph_window is not None:
                 break
-            time.sleep(0.2)
+            time.sleep(poll_interval)
         
         if graph_window is None:
             raise Exception("frmOrpheusGraph window not ready for OK button")

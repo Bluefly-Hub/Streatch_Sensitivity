@@ -3,7 +3,7 @@ Automation functions for well analysis
 """
 import pandas as pd
 import time
-from Button_Repository2 import Button_Repository, Cerbers_functions
+from Button_Repository2 import Button_Repository, Cerbers_functions, save_performance_log
 
 
 def run_automation_for_inputs(input_rows, gui=None):
@@ -89,6 +89,9 @@ def run_automation_for_inputs(input_rows, gui=None):
         # Update runtime in GUI
         if gui:
             gui.update_runtime()
+    
+    # Save performance log after completing all rows
+    save_performance_log()
     
     if all_results:
         return pd.concat(all_results, ignore_index=True)
